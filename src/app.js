@@ -6,6 +6,7 @@ const news = require('./utils/news')
 const app = express()
 
 const PORT = process.env.PORT || 3000
+
 const viewsPath = path.join(__dirname, "../templates/views")
 const partialsPath = path.join(__dirname, "../templates/partials")
 const publicDir = path.join(__dirname, "../public")
@@ -24,8 +25,7 @@ app.get('/api/news', (req, res)=>{
         if(err) throw err
         let news = []
         newsData.body.articles.forEach((row)=>{
-            news.push(row)
-            
+            news.push(row)            
         })
         res.send(news)
 

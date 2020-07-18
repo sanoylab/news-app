@@ -7,8 +7,7 @@ const getNews = (callback)=>{
     request({url: URL, json: true}, (error, response, body)=>{
         callback(undefined, {
             body
-        })
-        
+        })      
 
     })
 }
